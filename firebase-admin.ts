@@ -6,7 +6,6 @@ import {
   cert,
   ServiceAccount,
 } from "firebase-admin/app";
-
 import { getFirestore } from "firebase-admin/firestore";
 
 import serviceKey from "./service_key.json";

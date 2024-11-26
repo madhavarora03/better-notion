@@ -7,15 +7,18 @@ import {
   UserButton,
   useUser,
 } from "@clerk/nextjs";
+import Link from "next/link";
 
 function Header() {
   const { user } = useUser();
   return (
     <header className="flex items-center justify-between p-5">
       {user && (
-        <h1 className="text-2xl">
-          {user?.firstName}
-          {`'s`} Space
+        <h1 className="text-2xl hover:underline">
+          <Link href="/">
+            {user?.firstName}
+            {`'s`} Space
+          </Link>
         </h1>
       )}
 
