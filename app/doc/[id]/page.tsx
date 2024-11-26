@@ -1,4 +1,6 @@
 "use client";
+
+import Document from "@/components/Document";
 import { use } from "react";
 
 function DocumentPage({
@@ -9,6 +11,10 @@ function DocumentPage({
   }>;
 }) {
   const { id } = use(paramsPromise);
-  return <div>Document Page: {id}</div>;
+  return (
+    <div className="flex flex-col flex-1 min-h-screen">
+      <Document id={id} />
+    </div>
+  );
 }
 export default DocumentPage;
